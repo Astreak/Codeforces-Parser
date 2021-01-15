@@ -69,9 +69,12 @@ class CfParser(object):
 
 
 if __name__=="__main__":
+    parser=argparse.ArgumentParser()
+    parser.add_argument("-a",dest='prob')
+    parse=parser.parse_args()
     cf=CfParser('https://codeforces.com/contest/1470')
     cf.get()
-    cf.passprob("A")
+    cf.passprob(parse.prob)
 
     
     
