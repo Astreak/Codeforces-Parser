@@ -1,5 +1,5 @@
 # Codeforces-Parser
-## Basic parser for parsing inputs and outputs of sample test-cases during contests
+## Basic parser for inputs and outputs of sample test-cases during contests
 
 ## Steps to follow:
   - #### pip3(or pip) install -r requirement.txt
