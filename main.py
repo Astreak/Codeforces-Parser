@@ -38,7 +38,7 @@ class CfParser(object):
         except:
             pass
         for i in yolk:
-            print(i.get("class"))
+            #print(i.get("class"))
     
             if i.get('class')[0]=='input':
                 try:
@@ -71,8 +71,9 @@ class CfParser(object):
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
     parser.add_argument("-a",dest='prob')
+    parser.add_argument('-u',dest='url')
     parse=parser.parse_args()
-    cf=CfParser('https://codeforces.com/contest/1470')
+    cf=CfParser(parse.url)
     cf.get()
     cf.passprob(parse.prob)
 

@@ -198,7 +198,7 @@ void test_case(){
 	scanf("%lld%lld",&n,&m);
 	vector<ll> A(n);
 	vector<ll> B(m);
-	for(auto& x:A)
+	for(auto& x:A)	
 		scanf("%lld",&x);
 	for(auto& x:B)
 		scanf("%lld",&x);
@@ -206,14 +206,13 @@ void test_case(){
 	ll cnt=0;
 	ll j=0;
 	for(int i=0;i<n;i++){
-		if(j<m){
-				if(B[j]<B[A[i]-1]){
+			if(j<m && B[j]<=B[A[i]-1]){
+					cnt+=B[j];
 					++j;
-					cnt+=B[j];	
-				}
-				else
-					cnt+=B[A[i]-1];	
-		}
+			}
+			else{
+				cnt+=B[A[i]-1];
+			}
 	}
 	printf("%lld\n",cnt);
 	
