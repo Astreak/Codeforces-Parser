@@ -4,6 +4,10 @@ import argparse
 import filecmp
 import subprocess
 f=True
+try:
+    os.system('bash com.sh')
+except:
+    raise Exception('File compile Erro')
 if 'Directory' in os.listdir():
     for i in os.listdir('Directory'):
         path=os.path.join('Directory',i)
@@ -19,15 +23,15 @@ if 'Directory' in os.listdir():
             print(f"\033[1;31;40m {i} Failed\n")
             f=False
 else:
-    print("\033[1;31;40m How are dumb you are arsehole run the main first bitch \n")
+    print("\033[1;31;40m You have to run main first \n")
     sys.exit(1)
 
 if f:
-    print("\033[1;32;40m Passed All cases good job \n")
+    print("\033[1;32;40m Passed All  Test Cases \n")
     subprocess.call('bash final.sh',shell=True)
 
 else:
-    print("\033[1;31;40m Check the code again bitch\n")
+    print("\033[1;31;40m Wrong answer do not submit \n")
 
 
 

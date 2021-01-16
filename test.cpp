@@ -194,27 +194,26 @@ ll test(unordered_map<ll,ll> M,vector<pair<ll,ll>> P){
 	
 }
 void test_case(){
-	ll n,m;
-	scanf("%lld%lld",&n,&m);
-	vector<ll> A(n);
-	vector<ll> B(m);
-	for(auto& x:A)	
-		scanf("%lld",&x);
-	for(auto& x:B)
-		scanf("%lld",&x);
-	sort(A.rbegin(),A.rend());
-	ll cnt=0;
-	ll j=0;
-	for(int i=0;i<n;i++){
-			if(j<m && B[j]<=B[A[i]-1]){
-					cnt+=B[j];
-					++j;
-			}
-			else{
-				cnt+=B[A[i]-1];
-			}
-	}
-	printf("%lld\n",cnt);
+	string s1;
+	string s2;
+	cin>>s1>>s2;
+	ll n=s1.length();
+	ll m=s2.length();
+	ll ans=(n*m)/(__gcd(n,m));
+	ll f=ans/n;
+	ll h=ans/m;
+	string a="",b="";
+	for(int i=0;i<f;i++)
+		a+=s1;
+	for(int i=0;i<h;i++)
+		b+=s2;
+	
+	if(a==b)
+		cout<<a+b<<"\n";
+	else
+		puts("-1");
+	return ;
+	
 	
 }
 
