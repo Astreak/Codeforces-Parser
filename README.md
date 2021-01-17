@@ -2,6 +2,7 @@
 ## Basic parser for inputs and outputs of sample test-cases during contests
 
 ## Steps to follow:
+  - #### * (./final.sh if you wanna remove all scraped data.. )
   - #### pip3(or pip) install -r requirement.txt
   - #### python3 main.py -u {contest url} -a problem tag(A/B/C...)
   - #### (after getting  your file ready)./com.sh
